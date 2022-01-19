@@ -4,25 +4,29 @@
       "id": "d1",
       "name": "Agua 500ml",
       "price": 5.0,
-      "category": "menu"
+      "category": "menu",
+      "image": "public/images/agua500.jpg"
     },
     {
       "id": "d2",
       "name": "Agua 750ml",
       "price": 7.0,
-      "category": "menu"
+      "category": "menu",
+      "image": "public/images/agua750.jpg"
     },
     {
       "id": "d3",
       "name": "Bebida/gaseosa 500ml",
       "price": 7.0,
-      "category": "menu"
+      "category": "menu",
+      "image": "public/images/gaseosa.webp"
     },
     {
       "id": "d4",
       "name": "Bebida/gaseosa 750ml",
       "price": 10.0,
-      "category": "menu"
+      "category": "menu",
+      "image": "public/images/gaseosa750.jpg"
     }
   ],
 
@@ -30,22 +34,26 @@
     {
       "id": "b1",
       "name": "Café americano",
-      "price": 5.0
+      "price": 5.0,
+      "image": "public/images/cafeAmericano.jpg"
     },
     {
       "id": "b2",
       "name": "Café con leche",
-      "price": 7.0
+      "price": 7.0,
+      "image": "public/images/cafeLeche.jpg"
     },
     {
       "id": "b3",
       "name": "Jugo de fruta natural",
-      "price": 7.0
+      "price": 7.0,
+      "image": "public/images/jugofruta.jpg"
     },
     {
       "id": "b4",
       "name": "Sandwich de jamón y queso",
-      "price": 10.0
+      "price": 10.0,
+      "image": "public/images/sandwichJamonQueso.jpg"
     }
   ],
 
@@ -53,31 +61,37 @@
     {
       "id": "h1",
       "name": "Hamburguesa simple vacuno",
-      "price": 10.0
+      "price": 10.0,
+      "image": "public/images/carneSimple.jpg"
     },
     {
       "id": "h2",
       "name": "Hamburguesa simple pollo",
-      "price": 10.0
+      "price": 10.0,
+      "image": "public/images/pollosimple.jpg"
     },
     {
       "id": "h3",
       "name": "Hamburguesa simple vegetariana",
-      "price": 10.0
+      "price": 10.0,
+      "image": "public/images/veggieSimple.jpg"
     },
     {
       "id": "h4",
       "name": "Hamburguesa doble vacuno",
-      "price": 15.0
+      "price": 15.0,
+      "image": "public/images/carneDoble.jpg"
     },
     {
       "id": "h5",
       "name": "Hamburguesa doble pollo",
-      "price": 15.0
+      "price": 15.0,
+      "image": "public/images/polloDoble.jpg"
     }, {
       "id": "h6",
       "name": "Hamburguesa doble vegetariana",
-      "price": 15.0
+      "price": 15.0,
+      "image": "public/images/veggieDoble.jpg"
     }
   ],
 
@@ -85,12 +99,14 @@
     {
       "id": "s1",
       "name": "Papas fritas",
-      "price": 5.0
+      "price": 5.0,
+      "image": "public/images/papasfritas.jpg"
     },
     {
       "id": "s2",
       "name": "Aros de cebolla",
-      "price": 5.0
+      "price": 5.0,
+      "image": "public/images/arosCebolla.jpg"
     }
   ],
 
