@@ -1,46 +1,63 @@
 {
-  "drinks" : [
-  {
-    "id": "d1",
-    "name": "Agua 500ml",
-    "price": 5.00,
-    "category": "menu"
-  },
-  {
-    "id": "d2",
-    "name": "Agua 750ml",
-    "price": 7.00,
-    "category": "menu" 
-  },
-  {
-    "id": "d3",
-    "name": "Bebida/gaseosa 500ml",
-    "price": 7.00,
-    "category": "menu" 
-  },
-  {
-    "id": "d4",
-    "name": "Bebida/gaseosa 750ml",
-    "price": 10.00,
-    "category": "menu" 
-  }],
+  "drinks": [
+    {
+      "id": "d1",
+      "name": "Agua 500ml",
+      "price": 5.0,
+      "category": "menu"
+    },
+    {
+      "id": "d2",
+      "name": "Agua 750ml",
+      "price": 7.0,
+      "category": "menu"
+    },
+    {
+      "id": "d3",
+      "name": "Bebida/gaseosa 500ml",
+      "price": 7.0,
+      "category": "menu"
+    },
+    {
+      "id": "d4",
+      "name": "Bebida/gaseosa 750ml",
+      "price": 10.0,
+      "category": "menu"
+    }
+  ],
 
-  "breakfast" : [
+  "breakfast": [
     {
       "id": "b1",
       "name": "Café americano",
-      "price": 5.00
+      "price": 5.0
     },
     {
       "id": "b2",
       "name": "Café con leche",
-      "price": 7.00
+      "price": 7.0
     },
     {
       "id": "b3",
       "name": "Jugo de fruta natural",
-      "price": 7.00
+      "price": 7.0
+    },
+    {
+      "id": "b4",
+      "name": "Sandwich de jamón y queso",
+      "price": 10.0
+    }
+  ],
+  "hamburger": [
+    {
+      "id": "h1",
+      "name": "Hamburguesa simple",
+      "price": 10.0
+    },
+    {
+      "id": "h2",
+      "name": "Hamburguesa doble",
+      "price": 15.0
     }
   ]
-
 }
