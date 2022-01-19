@@ -1,45 +1,46 @@
 {
   "drinks" : [
-    {
-    "id": 1,
-    "name": "Café americano",
-    "price": 5.00,
-    "category": "breakfast" 
-  },
   {
-    "id": 2,
-    "name": "Café con leche",
-    "price": 7.00,
-    "category": "breakfast" 
-  },
-  {
-    "id": 3,
-    "name": "Jugo de fruta natural",
-    "price": 7.00,
-    "category": "breakfast" 
-  },
-  {
-    "id": 4,
+    "id": "d1",
     "name": "Agua 500ml",
     "price": 5.00,
-    "category": "menu" 
+    "category": "menu"
   },
   {
-    "id": 5,
+    "id": "d2",
     "name": "Agua 750ml",
     "price": 7.00,
     "category": "menu" 
   },
   {
-    "id": 6,
+    "id": "d3",
     "name": "Bebida/gaseosa 500ml",
     "price": 7.00,
     "category": "menu" 
   },
   {
-    "id": 7,
+    "id": "d4",
     "name": "Bebida/gaseosa 750ml",
     "price": 10.00,
     "category": "menu" 
-  }]
+  }],
+
+  "breakfast" : [
+    {
+      "id": "b1",
+      "name": "Café americano",
+      "price": 5.00
+    },
+    {
+      "id": "b2",
+      "name": "Café con leche",
+      "price": 7.00
+    },
+    {
+      "id": "b3",
+      "name": "Jugo de fruta natural",
+      "price": 7.00
+    }
+  ]
+
 }
