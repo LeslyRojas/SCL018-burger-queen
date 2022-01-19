@@ -48,16 +48,62 @@
       "price": 10.0
     }
   ],
+
   "hamburger": [
     {
       "id": "h1",
-      "name": "Hamburguesa simple",
+      "name": "Hamburguesa simple vacuno",
       "price": 10.0
     },
     {
       "id": "h2",
-      "name": "Hamburguesa doble",
+      "name": "Hamburguesa simple pollo",
+      "price": 10.0
+    },
+    {
+      "id": "h3",
+      "name": "Hamburguesa simple vegetariana",
+      "price": 10.0
+    },
+    {
+      "id": "h4",
+      "name": "Hamburguesa doble vacuno",
       "price": 15.0
+    },
+    {
+      "id": "h5",
+      "name": "Hamburguesa doble pollo",
+      "price": 15.0
+    }, {
+      "id": "h6",
+      "name": "Hamburguesa doble vegetariana",
+      "price": 15.0
+    }
+  ],
+
+  "sidedish" : [
+    {
+      "id": "s1",
+      "name": "Papas fritas",
+      "price": 5.0
+    },
+    {
+      "id": "s2",
+      "name": "Aros de cebolla",
+      "price": 5.0
+    }
+  ],
+
+  "extras" : [
+    {
+      "id": "e1",
+      "name": "Queso",
+      "price": 1.0
+    },
+    {
+      "id": "e2",
+      "name": "Huevo",
+      "price": 1.0
     }
   ]
 }
