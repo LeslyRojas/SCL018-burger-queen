@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
 function App() {
-  return <div>creando conflicto</div>;
+
+  return <div>haciendo ramas</div>;
+
 }
 
 export default App;
