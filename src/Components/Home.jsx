@@ -1,12 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-      <button>MENU</button>
-      <button>COCINA</button>
-      <button>ADMINISTRADOR</button>
+      <Link to='/Menu'><button>MENU</button></Link>
+      <Link to='/Cocina'><button>COCINA</button></Link>
+      <Link to='/Administrador'><button>ADMINISTRADOR</button></Link>
     </div>
   );
 };
