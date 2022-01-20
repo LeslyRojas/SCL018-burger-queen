@@ -6,6 +6,8 @@ import { Breakfast } from "./Components/Breakfast";
 import { Hamburgers } from "./Components/Hamburgers";
 import { SideDishes } from "./Components/SideDishes";
 import { Drinks } from "./Components/Drinks";
+import { Cocina } from './Components/Cocina';
+import { Administrador } from './Components/Administrador'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route exact path="/" element={<Home />}></Route>
       <Route exact path="/Home" element={<Home />}></Route>
       <Route path="/Menu" element={<Menu />}></Route>
+      <Route path="/Cocina" element={<Cocina />}></Route>
+      <Route path="/Administrador" element={<Administrador />}></Route>
       <Route path="/Breakfast" element={<Breakfast />}></Route>
       <Route path="/Hamburgers" element={<Hamburgers />}></Route>
       <Route path="/SideDishes" element={<SideDishes />}></Route>
