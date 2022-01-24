@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+
+
 
 function Menu() {
+
+
   return (
     <nav>
       <ul>
-        <li>
+        <li >
           <Link to="/Breakfast">Desayunos</Link>
         </li>
         <li>
@@ -19,7 +23,8 @@ function Menu() {
         </li>
       </ul>
     </nav>
+
   );
 }
 
-export { Menu };
+export { Menu }

@@ -34,25 +34,26 @@
     {
       "id": "b1",
       "name": "Café americano",
-      "price": 5.0,
+      "price": 5.00,
+      "image2": "public/images/cafeAmericano.jpg",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/cafeAmericano.jpg?raw=true"
     },
     {
       "id": "b2",
       "name": "Café con leche",
-      "price": 7.0,
+      "price": 7.00,
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/cafeLeche.jpg?raw=true"
     },
     {
       "id": "b3",
       "name": "Jugo de fruta natural",
-      "price": 7.0,
+      "price": 7.00,
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/jugofruta.jpg?raw=true"
     },
     {
       "id": "b4",
       "name": "Sandwich de jamón y queso",
-      "price": 10.0,
+      "price": 10.00,
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/sandwichJamonQueso.jpg?raw=true"
     }
   ],

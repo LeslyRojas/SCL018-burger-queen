@@ -1,7 +1,21 @@
-import React from "react";
+import React from 'react';
+import menu from '../data/burgerqueen.json';
 
-const Breakfast = () => {
-  return <h1>Aqui va lista desayunos</h1>;
-};
+function Breakfast() {
+  const { breakfast } = menu;
 
-export { Breakfast };
+  return (
+    <>
+      {breakfast.map((item) => (
+        <div>
+          <button type="button" key={item.id}>
+            <section>{item.name}</section>
+            <section>{item.price}</section>
+          </button>
+        </div>
+      ))}
+    </>
+  );
+}
+
+export default Breakfast;

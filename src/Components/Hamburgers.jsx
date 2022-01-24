@@ -1,7 +1,25 @@
-import React from "react";
+import React from "react"
+import menu from '../data/burgerqueen.json'
 
 const Hamburgers = () => {
-  return <h1>Aquí va listado de hamburguesas</h1>;
+  
+  const hamburger = menu.hamburger
+
+
+  return (
+    <>
+      {hamburger.map((item)=>{
+        return(
+          <div>
+            <button key={item.id}></button>
+            <section>{item.name}</section>
+            <section>${item.price}</section>
+          </div>
+          
+        )
+      })}
+    </>
+    )
 };
 
 export { Hamburgers };

@@ -1,14 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Home = () => {
+function Home() {
   return (
-    <div>
-      <Link to='/Menu'><button>MENU</button></Link>
-      <Link to='/Cocina'><button>COCINA</button></Link>
-      <Link to='/Administrador'><button>ADMINISTRADOR</button></Link>
-    </div>
-  );
-};
+    <>
+      <Link to="/Menu"><button type="button" className="bg-blue">MENU</button></Link>
+      <Link to="/Cocina"><button type="button">COCINA</button></Link>
+      <Link to="/Administrador"><button type="button">ADMINISTRADOR</button></Link>
+    </>
 
-export { Home };
+  );
+}
+
+export default Home;
