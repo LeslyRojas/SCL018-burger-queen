@@ -1,25 +1,23 @@
-import React from "react"
-import menu from '../data/burgerqueen.json'
+import React from 'react';
+import menu from '../data/burgerqueen.json';
 
-const Hamburgers = () => {
-  
-  const hamburger = menu.hamburger
-
-
+function Hamburgers() {
+  const { hamburger } = menu;
   return (
     <>
-      {hamburger.map((item)=>{
-        return(
-          <div>
-            <button key={item.id}></button>
-            <section>{item.name}</section>
-            <section>${item.price}</section>
-          </div>
-          
-        )
-      })}
-    </>
-    )
-};
+      {hamburger.map((item) => (
+        <div>
+          <button type="button" key={item.id}>g</button>
+          <section>{item.name}</section>
+          <section>
+            $
+            {item.price}
+          </section>
+        </div>
 
-export { Hamburgers };
+      ))}
+    </>
+  );
+}
+
+export default Hamburgers;
