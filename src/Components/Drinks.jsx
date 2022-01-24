@@ -1,7 +1,16 @@
-import React from "react";
+import React from 'react';
+import menu from '../data/burgerqueen.json';
 
 function Drinks() {
-  return <h1>Aqui va lista bebidas</h1>;
+  const { drinks } = menu;
+
+  return drinks.map((item) => (
+    <div className="my-20">
+      <button type="button">{item.image}</button>
+      <section>{item.name}</section>
+      <section>{item.price}</section>
+    </div>
+  ));
 }
 
-export { Drinks };
+export default Drinks;

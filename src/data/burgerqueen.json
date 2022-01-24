@@ -88,7 +88,8 @@
       "name": "Hamburguesa doble pollo",
       "price": 15.0,
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/polloDoble.jpg?raw=true"
-    }, {
+    },
+    {
       "id": "h6",
       "name": "Hamburguesa doble vegetariana",
       "price": 15.0,
@@ -96,7 +97,7 @@
     }
   ],
 
-  "sidedish" : [
+  "sidedish": [
     {
       "id": "s1",
       "name": "Papas fritas",
@@ -111,7 +112,7 @@
     }
   ],
 
-  "extras" : [
+  "extras": [
     {
       "id": "e1",
       "name": "Queso",
