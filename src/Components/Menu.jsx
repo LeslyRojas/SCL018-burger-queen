@@ -1,21 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ViewMenu from './ViewMenu';
 
 function Menu() {
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/Breakfast">Desayunos</Link>
-        </li>
-        <li>
-          <Link to="/Hamburgers">Hamburguesas</Link>
-        </li>
-        <li>
-          <Link to="/SideDishes">Acompañamientos</Link>
-        </li>
-        <li>
-          <Link to="/Drinks">Bebidas</Link>
+          <h2>Menu del día</h2>
+          <ViewMenu />
         </li>
       </ul>
     </nav>
