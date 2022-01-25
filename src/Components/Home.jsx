@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './style.module.css';
 
 function Home() {
   return (
-    <div>
+    <div className={styles.bg}>
       <Link to="/Menu">
-        <button type="button">MENU</button>
+        <button className={styles.btnMenu} type="button">MENU</button>
       </Link>
       <Link to="/Kitchen">
-        <button type="button">COCINA</button>
+        <button className={styles.btnMenu} type="button">COCINA</button>
       </Link>
       <Link to="/Administrator">
-        <button type="button">ADMINISTRADOR</button>
+        <button className={styles.btnMenu} type="button">ADMINISTRADOR</button>
       </Link>
     </div>
   );

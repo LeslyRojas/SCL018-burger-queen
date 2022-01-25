@@ -1,5 +1,6 @@
 import React from 'react';
 import menu from '../data/burgerqueen.json';
+import styles from './style.module.css';
 
 function ViewMenu() {
   const { breakfast } = menu;
@@ -10,8 +11,8 @@ function ViewMenu() {
   return (
     <>
       {breakfast.map((item) => (
-        <button type="button" key={item.id}>
-          <img src={item.image} alt="" />
+        <button className={styles.card} type="button" key={item.id}>
+          <img className={styles.image} src={item.image} alt="" />
           <section>{item.name}</section>
           <section>
             $
@@ -21,8 +22,8 @@ function ViewMenu() {
       ))}
 
       {hamburgers.map((item) => (
-        <button type="button" key={item.id}>
-          <img src={item.image} alt="" />
+        <button className={styles.card} type="button" key={item.id}>
+          <img className={styles.image} src={item.image} alt="" />
           <section>{item.name}</section>
           <section>
             $
@@ -32,8 +33,8 @@ function ViewMenu() {
       ))}
 
       {sideDishes.map((item) => (
-        <button type="button" key={item.id}>
-          <img src={item.image} alt="" />
+        <button className={styles.card} type="button" key={item.id}>
+          <img className={styles.image} src={item.image} alt="" />
           <section>{item.name}</section>
           <section>
             $
@@ -43,8 +44,8 @@ function ViewMenu() {
       ))}
 
       {drinks.map((item) => (
-        <button type="button" key={item.id}>
-          <img src={item.image} alt="" />
+        <button className={styles.card} type="button" key={item.id}>
+          <img className={styles.image} src={item.image} alt="" />
           <section>{item.name}</section>
           <section>
             $
