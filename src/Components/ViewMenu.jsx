@@ -1,49 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import menu from '../data/burgerqueen.json';
 import styles from './style.module.css';
 
 function ViewMenu() {
-  const { breakfast } = menu;
-  const hamburgers = menu.hamburger;
-  const sideDishes = menu.sidedish;
-  const { drinks } = menu;
+  const [food, setFood] = useState([]);
+
+  const toFilter = (category) => {
+    setFood(menu[category]);
+  };
 
   return (
     <>
-      {breakfast.map((item) => (
-        <button className={styles.card} type="button" key={item.id}>
-          <img className={styles.image} src={item.image} alt="" />
-          <section>{item.name}</section>
-          <section>
-            $
-            {item.price}
-          </section>
-        </button>
-      ))}
+      <button className={styles.nav} type="button" onClick={() => toFilter('breakfast')}>Desayunos</button>
+      <button className={styles.nav} type="button" onClick={() => toFilter('hamburger')}>Hamburguesas</button>
+      <button className={styles.nav} type="button" onClick={() => toFilter('sidedish')}>Acompañamientos</button>
+      <button className={styles.nav} type="button" onClick={() => toFilter('drinks')}>Bebidas</button>
 
-      {hamburgers.map((item) => (
-        <button className={styles.card} type="button" key={item.id}>
-          <img className={styles.image} src={item.image} alt="" />
-          <section>{item.name}</section>
-          <section>
-            $
-            {item.price}
-          </section>
-        </button>
-      ))}
-
-      {sideDishes.map((item) => (
-        <button className={styles.card} type="button" key={item.id}>
-          <img className={styles.image} src={item.image} alt="" />
-          <section>{item.name}</section>
-          <section>
-            $
-            {item.price}
-          </section>
-        </button>
-      ))}
-
-      {drinks.map((item) => (
+      {food.map((item) => (
         <button className={styles.card} type="button" key={item.id}>
           <img className={styles.image} src={item.image} alt="" />
           <section>{item.name}</section>
