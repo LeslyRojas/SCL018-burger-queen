@@ -6,8 +6,7 @@ function Menu() {
     <nav>
       <ul>
         <li>
-          <h2>Menu del día</h2>
-          <hr />
+          <h2>MENU</h2>
           <ViewMenu />
         </li>
       </ul>
