@@ -1,14 +1,10 @@
-import React, { useState, useContext } from 'react';
-// eslint-disable-next-line import/no-cycle
-import { globalContext } from '../App';
+import React, { useState } from 'react';
 import menu from '../data/burgerqueen.json';
 import styles from './style.module.css';
 
 // import Order from './Order';
 
 function ViewMenu() {
-  const menuContext = useContext(globalContext);
-
   const [food, setFood] = useState([]);
 
   const toFilter = (category) => {
@@ -24,7 +20,7 @@ function ViewMenu() {
       <hr />
 
       {food.map((item) => (
-        <button className={styles.card} type="button" key={item.id} onClick={() => menuContext.addItems(item)}>
+        <button className={styles.card} type="button" key={item.id}>
           <img className={styles.image} src={item.image} alt="" />
           <section>{item.name}</section>
           <section>
