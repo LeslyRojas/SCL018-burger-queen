@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
+// eslint-disable-next-line import/no-cycle
+import { globalContext } from '../App';
 import menu from '../data/burgerqueen.json';
 import styles from './style.module.css';
-import { globalContext } from './AppContext';
+
 // import Order from './Order';
 
 function ViewMenu() {
