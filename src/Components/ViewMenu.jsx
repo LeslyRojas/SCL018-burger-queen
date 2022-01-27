@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import menu from '../data/burgerqueen.json';
 import styles from './style.module.css';
-import { globalContext } from './AppContext';
+
 // import Order from './Order';
 
 function ViewMenu() {
-  const menuContext = useContext(globalContext);
+
 
   const [food, setFood] = useState([]);
 
