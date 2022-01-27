@@ -1,9 +1,8 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 import menu from '../data/burgerqueen.json';
+import context from '.context.js';
 
-export const globalContext = createContext();
-
-function AppContext(props) {
+const Actions = () => {
   const [items, setItems] = useState({
     itemList: menu,
     order: [],
@@ -23,13 +22,11 @@ function AppContext(props) {
       : [...items.order, { ...item, count: 1 }],
   });
 
-  const orderProps = {items, setItems, addItems};
+  const orderProps = { items, setItems, addItems };
 
   return (
-    <globalContext.Provider value={orderProps}>
-      {props.children}
-    </globalContext.Provider>
+    
   );
 }
 
-export default AppContext;
+export default Actions;
