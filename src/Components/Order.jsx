@@ -1,17 +1,39 @@
-// import React, { useState } from 'react';
-// import menu from '../data/burgerqueen.json';
+import React, { Fragment, useContext } from 'react';
+// eslint-disable-next-line import/no-cycle
+import { globalContext } from '../App';
 
-// function Order() {
-//   const [order, setOrder] = useState([]);
-//   const AddItem = (id) => {
-//     setOrder(menu[id]);
-//   };
-//   return (
-//     <>
-//       <h3>Pedido</h3>
-//       {/* {order.map((item) => } */}
-//     </>
-//   );
-// }
+function Order() {
+  const menuContext = useContext(globalContext);
 
-// export default Order;
+  const handleTotal = () => {
+    globalContext.totalOrderAmount();
+  };
+
+  return (
+    <>
+      <h3>Pedido</h3>
+      {menuContext.items.order.map((item) => (
+        <>
+          <div>
+            <p>{item.name}</p>
+            <p>{item.price}</p>
+          </div>
+          <section>
+            <button type="button">Delete</button>
+            <button type="button">+</button>
+            <button type="button">-</button>
+          </section>
+
+        </>
+
+      ))}
+      <h3>
+        Total:
+        {' '}
+        {handleTotal}
+      </h3>
+    </>
+  );
+}
+
+export default Order;
