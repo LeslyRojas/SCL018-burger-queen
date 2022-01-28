@@ -1,12 +1,13 @@
 import React, { createContext, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
+// eslint-disable-next-line import/no-cycle
 import Menu from './Components/Menu';
 import Kitchen from './Components/Kitchen';
 import Administrator from './Components/Administrator';
 import menu from './data/burgerqueen.json';
 
-const globalContext = createContext();
+export const globalContext = createContext();
 
 function App() {
   const [items, setItems] = useState({
@@ -45,6 +46,10 @@ function App() {
         : orderItem)),
     });
   };
+  // const totalOrderAmount = items.order
+  //   .reduce((total, item) => (total += item.price * item.count), 0)
+  //   .toFixed(2);
+
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
     items, setItems, addItems, removeOrderItem, increaseItem, decreaseItem,
@@ -62,4 +67,4 @@ function App() {
   );
 }
 
-export { App, globalContext };
+export default App;
