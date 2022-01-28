@@ -1,16 +1,12 @@
-/* eslint-disable no-undef */
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/no-cycle */
 import React, { createContext, useState } from 'react';
-import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Menu from './Components/Menu';
-import ViewMenu from './Components/ViewMenu';
 import Kitchen from './Components/Kitchen';
 import Administrator from './Components/Administrator';
-import menu from './burgerqueen.json';
+import menu from './data/burgerqueen.json';
 
-export const globalContext = createContext();
+const globalContext = createContext();
 
 function App() {
   const [items, setItems] = useState({
@@ -44,12 +40,11 @@ function App() {
   const decreaseItem = (id) => {
     setItems({
       ...items,
-      order: items.order.map((orderItem) => orderItem.id === id)
+      order: items.order.map((orderItem) => (orderItem.id === id
         ? { ...orderItem, count: orderItem.count > 1 ? orderItem.count - 1 : 1 }
-        : orderItem,
+        : orderItem)),
     });
   };
-
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
     items, setItems, addItems, removeOrderItem, increaseItem, decreaseItem,
@@ -62,10 +57,9 @@ function App() {
         <Route path="/Menu" element={<Menu />} />
         <Route path="/Kitchen" element={<Kitchen />} />
         <Route path="/Administrator" element={<Administrator />} />
-        <Route path="/ViewMenu" element={<ViewMenu />} />
       </Routes>
     </globalContext.Provider>
   );
 }
 
-export default App;
+export { App, globalContext };
