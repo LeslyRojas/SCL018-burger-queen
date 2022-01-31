@@ -1,3 +1,6 @@
+/* eslint-disable operator-assignment */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-confusing-arrow */
 import React, { createContext, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
@@ -33,22 +36,21 @@ function App() {
   const increaseItem = (id) => {
     setItems({
       ...items,
-      order: items.order.map((orderItem) => (orderItem.id === id
+      order: items.order.map((orderItem) => orderItem.id === id
         ? { ...orderItem, count: orderItem.count + 1 }
-        : orderItem)),
+        : orderItem),
     });
   };
   const decreaseItem = (id) => {
     setItems({
       ...items,
-      order: items.order.map((orderItem) => (orderItem.id === id
+      order: items.order.map((orderItem) => orderItem.id === id
         ? { ...orderItem, count: orderItem.count > 1 ? orderItem.count - 1 : 1 }
-        : orderItem)),
+        : orderItem),
     });
   };
-  const totalOrderAmount = items.order
-    .reduce((total, item) => {(total = total + item.price * item.count), 0 });
 
+  // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
     items, setItems, addItems, removeOrderItem, increaseItem, decreaseItem,
   };
