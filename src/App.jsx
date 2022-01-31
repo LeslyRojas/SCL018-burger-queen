@@ -46,11 +46,9 @@ function App() {
         : orderItem)),
     });
   };
-  // const totalOrderAmount = items.order
-  //   .reduce((total, item) => (total += item.price * item.count), 0)
-  //   .toFixed(2);
+  const totalOrderAmount = items.order
+    .reduce((total, item) => {(total = total + item.price * item.count), 0 });
 
-  // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
     items, setItems, addItems, removeOrderItem, increaseItem, decreaseItem,
   };
