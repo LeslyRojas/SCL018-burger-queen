@@ -32,6 +32,7 @@ function ViewMenu() {
           <section>{item.name}</section>
           <section>
             $
+            {' '}
             {item.price}
           </section>
         </button>

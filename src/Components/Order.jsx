@@ -33,14 +33,28 @@ function Order() {
       {menuContext.items.order.map((item) => (
         <div key={item.id}>
           <p>{item.name}</p>
-          <p>{item.price}</p>
+          <p>
+            $
+            {' '}
+            {item.price}
+          </p>
 
           <section>
-            <button type="button" onClick={() => handleDelete(item.id)}>Delete</button>
             <button type="button" onClick={() => handleIncrease(item.id)}>+</button>
-            <p>{item.count}</p>
+            <p>
+              x
+              {' '}
+              {item.count}
+            </p>
             <button type="button" onClick={() => handleDecrease(item.id)}>-</button>
           </section>
+          <button type="button" onClick={() => handleDelete(item.id)}>Delete</button>
+          <p>
+            total por producto $
+            {' '}
+            {item.price * item.count}
+          </p>
+          <hr />
         </div>
 
       ))}
@@ -52,6 +66,7 @@ function Order() {
       </h3>
       <h3>
         Total:
+        $
         {' '}
         {totalOrderAmount}
       </h3>
