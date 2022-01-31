@@ -9,6 +9,10 @@ function Order() {
   //   globalContext.totalOrderAmount();
   // };
 
+  const handleDelete = (id) => {
+    menuContext.removeOrderItem(id);
+  };
+
   return (
     <>
       <h3>Pedido</h3>
@@ -18,8 +22,8 @@ function Order() {
           <p>{item.price}</p>
 
           <section>
-            <button type="button">Delete</button>
-            <button type="button">+</button>
+            <button type="button" onClick={() => handleDelete(item.id)}>Delete</button>
+            <button type="button" onClick={() => menuContext.increaseItem(item.id)}>+</button>
             <button type="button">-</button>
           </section>
         </div>
