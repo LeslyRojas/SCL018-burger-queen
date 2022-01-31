@@ -13,6 +13,9 @@ import menu from './data/burgerqueen.json';
 export const globalContext = createContext();
 
 function App() {
+  const [name, setName] = useState('');
+  const [table, setTable] = useState('');
+
   const [items, setItems] = useState({
     itemList: menu,
     order: [],
@@ -52,9 +55,19 @@ function App() {
 
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
-    items, setItems, addItems, removeOrderItem, increaseItem, decreaseItem,
+    items,
+    name,
+    setName,
+    table,
+    setTable,
+    setItems,
+    addItems,
+    removeOrderItem,
+    increaseItem,
+    decreaseItem,
   };
   return (
+
     <globalContext.Provider value={value}>
       <Routes>
         <Route exact path="/" element={<Home />} />
