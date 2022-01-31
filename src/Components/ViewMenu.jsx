@@ -5,12 +5,12 @@ import styles from './style.module.css';
 // eslint-disable-next-line import/no-cycle
 import { globalContext } from '../App';
 import Order from './Order';
+import Client from './Client';
 
 function ViewMenu() {
   const menuContext = useContext(globalContext);
 
   const [food, setFood] = useState([]);
-  // const menuContext = useContext(globalContext);
 
   const toFilter = (category) => {
     setFood(menu[category]);
@@ -20,6 +20,8 @@ function ViewMenu() {
   };
   return (
     <>
+      <Client />
+      <hr />
       <button className={styles.nav} type="button" onClick={() => toFilter('breakfast')}>Desayunos</button>
       <button className={styles.nav} type="button" onClick={() => toFilter('hamburger')}>Hamburguesas</button>
       <button className={styles.nav} type="button" onClick={() => toFilter('sidedish')}>Acompañamientos</button>

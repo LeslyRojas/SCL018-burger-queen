@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 /* eslint-disable operator-assignment */
