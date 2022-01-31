@@ -1,23 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Desayunos } from "./Desayunos";
-import { Hamburguesas } from "./Hamburguesas"
+import React from 'react';
+import ViewMenu from './ViewMenu';
 
-
-const Menu = () => {
-
+function Menu() {
   return (
     <nav>
       <ul>
         <li>
-          <Link to='/Desayunos'>Desayunos</Link>
-        </li>
-        <li>
-          <Link to='/Hamburguesas'>Hamburguesas</Link>
+          <h2>MENU</h2>
+          <ViewMenu />
         </li>
       </ul>
     </nav>
-  )
-};
 
-export  { Menu };
+  );
+}
+
+export default Menu;

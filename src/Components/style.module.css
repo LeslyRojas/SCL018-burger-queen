@@ -1,0 +1,30 @@
+.btnMenu{
+  background: rgb(44, 43, 43);
+  color: white;
+  border: none;
+  height: 100px;
+  width: 300px;
+  font-size: 30px;
+  margin-top: 100px;
+  margin-left: 200px;
+  justify-items: center;
+
+}
+.nav{
+  background: black;
+  color: white;
+  height: 40px;
+  width: 160px;
+  border: none;
+}
+.card{
+  margin: 5px;
+  padding: 1px;
+  width: 200px;
+  height: 220px;
+}
+
+.image{
+  width: 184px;
+  height: 160px;
+}

@@ -4,28 +4,28 @@
       "id": "d1",
       "name": "Agua 500ml",
       "price": 5.0,
-      "category": "menu",
+      "category": "drinks",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/agua500.jpg?raw=true"
     },
     {
       "id": "d2",
       "name": "Agua 750ml",
       "price": 7.0,
-      "category": "menu",
+      "category": "drinks",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/agua750.jpg?raw=true"
     },
     {
       "id": "d3",
       "name": "Bebida/gaseosa 500ml",
       "price": 7.0,
-      "category": "menu",
+      "category": "drinks",
       "image": "https://raw.githubusercontent.com/LeslyRojas/SCL018-burger-queen/main/public/images/gaseosa.webp"
     },
     {
       "id": "d4",
       "name": "Bebida/gaseosa 750ml",
       "price": 10.0,
-      "category": "menu",
+      "category": "drinks",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/gaseosa750.jpg?raw=true"
     }
   ],
@@ -34,25 +34,30 @@
     {
       "id": "b1",
       "name": "Café americano",
-      "price": 5.0,
+      "price": 5.00,
+      "category": "breakfast",
+      "image2": "public/images/cafeAmericano.jpg",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/cafeAmericano.jpg?raw=true"
     },
     {
       "id": "b2",
       "name": "Café con leche",
-      "price": 7.0,
+      "price": 7.00,
+      "category": "breakfast",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/cafeLeche.jpg?raw=true"
     },
     {
       "id": "b3",
       "name": "Jugo de fruta natural",
-      "price": 7.0,
+      "price": 7.00,
+      "category": "breakfast",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/jugofruta.jpg?raw=true"
     },
     {
       "id": "b4",
       "name": "Sandwich de jamón y queso",
-      "price": 10.0,
+      "price": 10.00,
+      "category": "breakfast",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/sandwichJamonQueso.jpg?raw=true"
     }
   ],
@@ -62,55 +67,64 @@
       "id": "h1",
       "name": "Hamburguesa simple vacuno",
       "price": 10.0,
+      "category": "hamburger",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/carneSimple.jpg?raw=true"
     },
     {
       "id": "h2",
       "name": "Hamburguesa simple pollo",
       "price": 10.0,
+      "category": "hamburger",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/pollosimple.jpg?raw=true"
     },
     {
       "id": "h3",
       "name": "Hamburguesa simple vegetariana",
       "price": 10.0,
+      "category": "hamburger",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/veggieSimple.jpg?raw=true"
     },
     {
       "id": "h4",
       "name": "Hamburguesa doble vacuno",
       "price": 15.0,
+      "category": "hamburger",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/carneDoble.jpg?raw=true"
     },
     {
       "id": "h5",
       "name": "Hamburguesa doble pollo",
       "price": 15.0,
+      "category": "hamburger",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/polloDoble.jpg?raw=true"
-    }, {
+    },
+    {
       "id": "h6",
       "name": "Hamburguesa doble vegetariana",
       "price": 15.0,
+      "category": "hamburger",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/veggieDoble.jpg?raw=true"
     }
   ],
 
-  "sidedish" : [
+  "sidedish": [
     {
       "id": "s1",
       "name": "Papas fritas",
       "price": 5.0,
+      "category": "sidedish",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/papasfritas.jpg?raw=true"
     },
     {
       "id": "s2",
       "name": "Aros de cebolla",
       "price": 5.0,
+      "category": "sidedish",
       "image": "https://github.com/LeslyRojas/SCL018-burger-queen/blob/main/public/images/arosCebolla.jpg?raw=true"
     }
   ],
 
-  "extras" : [
+  "extras": [
     {
       "id": "e1",
       "name": "Queso",

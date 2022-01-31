@@ -1,14 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './style.module.css';
 
-const Home = () => {
+function Home() {
   return (
-    <div>
-      <Link to='/Menu'><button>MENU</button></Link>
-      <Link to='/Cocina'><button>COCINA</button></Link>
-      <Link to='/Administrador'><button>ADMINISTRADOR</button></Link>
+    <div className={styles.bg}>
+      <Link to="/Menu">
+        <button className={styles.btnMenu} type="button">MENU</button>
+      </Link>
+      <Link to="/Kitchen">
+        <button className={styles.btnMenu} type="button">COCINA</button>
+      </Link>
+      <Link to="/Administrator">
+        <button className={styles.btnMenu} type="button">ADMINISTRADOR</button>
+      </Link>
     </div>
   );
-};
+}
 
-export { Home };
+export default Home;
