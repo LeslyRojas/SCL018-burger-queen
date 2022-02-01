@@ -5,6 +5,7 @@
 import React, { Fragment, useContext } from 'react';
 // eslint-disable-next-line import/no-cycle
 import { globalContext } from '../App';
+import styles from './style.module.css';
 
 function Order() {
   const menuContext = useContext(globalContext);
@@ -31,33 +32,41 @@ function Order() {
   return (
     <>
       <h3>Pedido</h3>
+      <div className={styles.orderNav}>
+        <p>Producto</p>
+        <p>Cantidad</p>
+        <p>Total </p>
+      </div>
       {menuContext.items.order.map((item) => (
-        <div key={item.id}>
-          <p>{item.name}</p>
-          <p>
-            $
-            {' '}
-            {item.price}
-          </p>
-
+        <div
+          key={item.id}
+          className={styles.container}
+        >
           <section>
-            <button type="button" onClick={() => handleIncrease(item.id)}>+</button>
+            {item.name}
             <p>
-              x
+              $
+              {' '}
+              {item.price}
+            </p>
+
+          </section>
+          <button className={styles.deleteBtn} type="button" onClick={() => handleDelete(item.id)}>Delete</button>
+          <div className={styles.quantity}>
+            <button className={styles.increaseBtn} type="button" onClick={() => handleIncrease(item.id)}>+</button>
+            <p>
               {' '}
               {item.count}
             </p>
-            <button type="button" onClick={() => handleDecrease(item.id)}>-</button>
-          </section>
-          <button type="button" onClick={() => handleDelete(item.id)}>Delete</button>
+            <button className={styles.decreaseBtn} type="button" onClick={() => handleDecrease(item.id)}>-</button>
+          </div>
           <p>
-            total por producto $
+            $
             {' '}
             {item.price * item.count}
           </p>
-          <hr />
-        </div>
 
+        </div>
       ))}
       <h3>
         {' '}
