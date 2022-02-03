@@ -34,9 +34,8 @@ function Order() {
 
   const submit = async (e) => {
     e.preventDefault(e);
-    // const orderDate = new Date();
-    // eslint-disable-next-line max-len
-    // const orderTime = `${orderDate.getHours()}:${orderDate.getMinutes()}:${orderDate.getSeconds()}`;
+    const orderDate = new Date();
+    const orderTime = `${orderDate.getHours()}:${orderDate.getMinutes()}:${orderDate.getSeconds()}`;
 
     if (menuContext.name === ' ' || menuContext.table === ' ') {
       // eslint-disable-next-line no-alert
@@ -44,11 +43,12 @@ function Order() {
     } else {
       try {
         await addDoc(collection(db, 'orders'), {
-          // time: orderTime,
+          time: orderTime,
           name: menuContext.name,
           table: menuContext.table,
           order: menuContext.items.order,
           totalAmount: totalOrderAmount,
+          status: menuContext.status,
         });
       } catch (error) {
         console.log(error);
