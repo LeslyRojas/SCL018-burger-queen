@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable react/react-in-jsx-scope */
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { globalContext } from '../App';
 
 function Client() {

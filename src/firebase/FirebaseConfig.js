@@ -14,5 +14,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-export default db;
+// eslint-disable-next-line import/prefer-default-export
+export const db = getFirestore(app);

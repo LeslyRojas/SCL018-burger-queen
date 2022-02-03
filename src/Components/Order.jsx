@@ -1,10 +1,11 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable no-console */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 /* eslint-disable operator-assignment */
 import React, { useContext } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
-import db from '../firebase/FirebaseConfig';
+import { db } from '../firebase/FirebaseConfig';
 // eslint-disable-next-line import/no-cycle
 import { globalContext } from '../App';
 import styles from './style.module.css';
@@ -33,32 +34,33 @@ function Order() {
 
   const submit = async (e) => {
     e.preventDefault(e);
-    const orderDate = new Date();
-    const orderTime = `${orderDate.getHours()}:${orderDate.getMinutes()}:${orderDate.getSeconds()}`;
+    // const orderDate = new Date();
+    // eslint-disable-next-line max-len
+    // const orderTime = `${orderDate.getHours()}:${orderDate.getMinutes()}:${orderDate.getSeconds()}`;
 
-    if (menuContext.name === ' ' || menuContext.table === ' ' || menuContext.order.length === 0) {
+    if (menuContext.name === ' ' || menuContext.table === ' ') {
       // eslint-disable-next-line no-alert
       alert('Completa los campos antes de enviar pedido');
     } else {
       try {
         await addDoc(collection(db, 'orders'), {
-          time: orderTime,
+          // time: orderTime,
           name: menuContext.name,
           table: menuContext.table,
           order: menuContext.items.order,
-          totalAmount: menuContext.totalOrderAmount,
+          totalAmount: totalOrderAmount,
         });
       } catch (error) {
-        console.log('error');
+        console.log(error);
       }
       menuContext.setName('');
-      menuContext.settable('');
+      menuContext.setTable('');
       menuContext.cleanItemsFromOrder();
     }
   };
 
   return (
-    <form onSubmit={submit}>
+    <form action="" onSubmit={submit}>
       <div className={styles.clientInfo}>
         <h3>Pedido</h3>
         <p>
@@ -122,7 +124,7 @@ function Order() {
           {' '}
           {totalOrderAmount}
         </h3>
-        <button type="button">Enviar Pedido</button>
+        <button type="submit">Enviar Pedido</button>
       </div>
     </form>
   );
