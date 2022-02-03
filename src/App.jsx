@@ -52,6 +52,11 @@ function App() {
         : orderItem),
     });
   };
+  const cleanItemsFromOrder = () => {
+    setItems({
+      ...items, order: [],
+    });
+  };
 
   // eslint-disable-next-line react/jsx-no-constructed-context-values
   const value = {
@@ -65,6 +70,7 @@ function App() {
     removeOrderItem,
     increaseItem,
     decreaseItem,
+    cleanItemsFromOrder,
   };
   return (
 

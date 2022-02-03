@@ -1,6 +1,7 @@
 {
   "projects": {
-    "staging": "my-burger-queen"
+    "staging": "my-burger-queen",
+    "dev": "my-burger-queen"
   },
   "targets": {}
 }

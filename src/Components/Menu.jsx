@@ -7,7 +7,7 @@ function Menu() {
     <nav>
       <ul>
         <li>
-          <h2>MENU</h2>
+          <h1>MENU</h1>
           <ViewMenu />
         </li>
       </ul>
