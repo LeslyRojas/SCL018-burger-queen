@@ -12,7 +12,6 @@ function Kitchen() {
       (snapshot) => {
         const arrayOrderList = snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }
         ));
-        console.log(arrayOrderList);
         setOrderList(arrayOrderList);
       },
     );
@@ -24,9 +23,22 @@ function Kitchen() {
       {orderList.map((doc) => (
         <div key={doc.id}>
           <p>{doc.time}</p>
-          <p>{doc.name}</p>
-          <p>{doc.table}</p>
-          <p>{doc.order.array}</p>
+          <p>
+            Nombre Cliente:
+            {' '}
+            {doc.name}
+          </p>
+          <p>
+            Mesa
+            {' '}
+            {doc.table}
+          </p>
+          {doc.order.map((order) => (
+            <div key={order.id}>
+              <p>{order.name}</p>
+              <p>{order.count}</p>
+            </div>
+          ))}
           <hr />
         </div>
       ))}
@@ -35,19 +47,3 @@ function Kitchen() {
 }
 
 export default Kitchen;
-// time: orderTime,
-//           name: menuContext.name,
-//           table: menuContext.table,
-//           order: menuContext.items.order,
-//           totalAmount: totalOrderAmount,
-
-// export const readData = (callback) => {
-//   const q = query(collection(db, 'users'), orderBy('datePosted', 'desc'));
-//   const dataPost = [];
-//   onSnapshot(q, (querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//       dataPost.push({ id: doc.id, ...doc.data() });
-//     });
-//     callback(dataPost)
-//   });
-// };
