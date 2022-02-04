@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable import/no-cycle */
 import React, { useState, useContext } from 'react';
 import menu from '../data/burgerqueen.json';

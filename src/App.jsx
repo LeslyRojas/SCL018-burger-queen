@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default-member */
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable operator-assignment */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-confusing-arrow */
