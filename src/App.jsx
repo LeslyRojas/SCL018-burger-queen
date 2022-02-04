@@ -23,12 +23,12 @@ function App() {
     order: [],
   });
 
-  const [pendingStatus, setPendingStatus] = useState({
-    status: 'ready to deliver',
-  });
-  const [deliverStatus, setDeliverStatus] = useState({
-    status: 'delivered',
-  });
+  // const [pendingStatus, setPendingStatus] = useState({
+  //   status: 'ready to deliver',
+  // });
+  // const [deliverStatus, setDeliverStatus] = useState({
+  //   status: 'delivered',
+  // });
 
   const addItems = useCallback((item) => setItems({
     ...items,
@@ -70,10 +70,10 @@ function App() {
   }, [items]);
   // const foo = useMemo(() => ({foo: 'bar'}), []);
   const value = useMemo(() => ({
-    setPendingStatus,
-    pendingStatus,
-    setDeliverStatus,
-    deliverStatus,
+    // setPendingStatus,
+    // pendingStatus,
+    // setDeliverStatus,
+    // deliverStatus,
     items,
     name,
     setName,

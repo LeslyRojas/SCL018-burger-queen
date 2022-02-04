@@ -39,6 +39,13 @@ function Kitchen() {
               <p>{order.count}</p>
             </div>
           ))}
+          <p>
+            Total:
+            {' '}
+            $
+            {' '}
+            {doc.totalAmount}
+          </p>
           <hr />
         </div>
       ))}
