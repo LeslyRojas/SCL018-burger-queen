@@ -19,36 +19,49 @@ function Kitchen() {
 
   return (
     <>
-      <h1 className={styles.cocina}>Aquí va la cocina</h1>
-      {orderList.map((doc) => (
-        <div key={doc.id}>
-          <p>{doc.time}</p>
-          <p>
-            Nombre Cliente:
-            {' '}
-            {doc.name}
-          </p>
-          <p>
-            Mesa
-            {' '}
-            {doc.table}
-          </p>
-          {doc.order.map((order) => (
-            <div key={order.id}>
-              <p>{order.name}</p>
-              <p>{order.count}</p>
+      <header>
+        <h1>BURGER QUEEN</h1>
+      </header>
+      <div className={styles.ordersContainer}>
+        {orderList.map((doc) => (
+          <div className={styles.kitchenOrder} key={doc.id}>
+            <div className={styles.orderDetail}>
+              <p>
+                Mesa
+                {' '}
+                {doc.table}
+              </p>
+              <p>{doc.time}</p>
+
+              <p>
+                Cliente:
+                {' '}
+                {doc.name}
+              </p>
             </div>
-          ))}
-          <p>
-            Total:
-            {' '}
-            $
-            {' '}
-            {doc.totalAmount}
-          </p>
-          <hr />
-        </div>
-      ))}
+            {doc.order.map((order) => (
+              <div className={styles.orderProductCount} key={order.id}>
+                <p>{order.name}</p>
+                <p>{order.count}</p>
+              </div>
+            ))}
+            <div className={styles.totalSum}>
+              <p>
+                Total:
+                {' '}
+                $
+                {' '}
+                {doc.totalAmount}
+              </p>
+            </div>
+            <div className={styles.statusBtns}>
+              <button className={styles.pendingOrderBtn} type="button">En Preparación</button>
+              <button className={styles.readyOrderBtn} type="button">Listo para servir</button>
+            </div>
+            <hr />
+          </div>
+        ))}
+      </div>
     </>
   );
 }
