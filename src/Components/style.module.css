@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rancho&display=swap');
 body{
-  background: url("/images/burger9.jpeg");
+  background: url("../imagesBG/burger9.jpg");
   background-position-y: 20%;
   background-position-x: center;
   background-attachment: fixed;

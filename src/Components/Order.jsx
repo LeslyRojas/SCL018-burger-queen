@@ -48,7 +48,7 @@ function Order() {
           table: menuContext.table,
           order: menuContext.items.order,
           totalAmount: totalOrderAmount,
-          // status: menuContext.status,
+          status: 'pending',
         });
       } catch (error) {
         console.log(error);

@@ -25,11 +25,11 @@ function App() {
     order: [],
   });
 
-  // const [pendingStatus, setPendingStatus] = useState({
-  //   status: 'ready to deliver',
-  // });
+  const [cookingStatus, setCookingStatus] = useState({
+    status: 'cooking',
+  });
   // const [deliverStatus, setDeliverStatus] = useState({
-  //   status: 'delivered',
+  //   status: 'ready to deliver',
   // });
 
   const addItems = useCallback((item) => setItems({
@@ -70,10 +70,10 @@ function App() {
       ...items, order: [],
     });
   }, [items]);
-  // const foo = useMemo(() => ({foo: 'bar'}), []);
+
   const value = useMemo(() => ({
-    // setPendingStatus,
-    // pendingStatus,
+    setCookingStatus,
+    cookingStatus,
     // setDeliverStatus,
     // deliverStatus,
     items,
