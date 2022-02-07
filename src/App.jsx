@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable operator-assignment */
@@ -24,13 +25,7 @@ function App() {
     itemList: menu,
     order: [],
   });
-
-  const [cookingStatus, setCookingStatus] = useState({
-    status: 'cooking',
-  });
-  // const [deliverStatus, setDeliverStatus] = useState({
-  //   status: 'ready to deliver',
-  // });
+  const [orderStatus, setOrderStatus] = useState({ status: 'pending' });
 
   const addItems = useCallback((item) => setItems({
     ...items,
@@ -72,10 +67,8 @@ function App() {
   }, [items]);
 
   const value = useMemo(() => ({
-    setCookingStatus,
-    cookingStatus,
-    // setDeliverStatus,
-    // deliverStatus,
+    orderStatus,
+    setOrderStatus,
     items,
     name,
     setName,
