@@ -4,7 +4,7 @@
 /* eslint-disable import/no-cycle */
 import React, { useContext, useEffect, useState } from 'react';
 import {
-  collection, onSnapshot, updateDoc, doc,
+  collection, onSnapshot,
 } from 'firebase/firestore';
 import styles from './style.module.css';
 import { db } from '../firebase/FirebaseConfig';
@@ -13,7 +13,7 @@ import { globalContext } from '../App';
 
 function Kitchen() {
   const menuContext = useContext(globalContext);
-  const { orderStatus, setOrderStatus } = menuContext;
+  // const editStatus = menuContext.editStatus();
 
   const [orderList, setOrderList] = useState([]);
 
@@ -29,30 +29,33 @@ function Kitchen() {
     );
   }, []);
 
-  const changeOrderStatus = () => {
-    setOrderStatus({
-      ...orderStatus,
-      status: 'ready to serve',
-    });
-  };
+  // const changeOrderStatus = () => {
+  //   setOrderStatus({
+  //     ...orderStatus,
+  //     status: 'ready to serve',
+  //   });
+  // };
 
-  const updateOrderStatus = async (e) => {
-    e.preventDefault();
-    try {
-      await updateDoc(doc(db, 'orders', document.id), {
-        status: orderStatus,
-      });
-    } catch (error) {
-      console.log('ha sucedido un  error! eso es lo único que sabemos');
-      console.log(error);
-    }
-  };
+  // const updateOrderStatus = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     await updateDoc(doc(db, 'orders', document.id), {
+  //       status: orderStatus,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //     console.log('ha sucedido un  error! eso es lo único que sabemos');
+  //   }
+  // };
 
-  const pendingOrders = orderList.filter((document) => {
-    return document.status === 'pending';
-  });
+  // const pendingOrders = orderList.filter((document) => {
+  //   return document.status === 'pending';
+  // });
+  const pendingOrders = orderList.filter((document) => document.status === 'pending');
+  const cookingOrders = orderList.filter((document) => document.status === 'Cooking');
+  const filterTotalOrders = pendingOrders.concat(cookingOrders);
 
-  const sortedOrders = pendingOrders.sort((a, b) => {
+  const sortedOrders = filterTotalOrders.sort((a, b) => {
     if (a.time < b.time) {
       return 1;
     } if (a.time > b.time) {
@@ -69,42 +72,51 @@ function Kitchen() {
 
       <div className={styles.ordersContainer}>
         {sortedOrders.map((document) => (
-          <form key={document.id} action="" onSubmit={(e) => changeOrderStatus(e.target)}>
-            <div className={styles.kitchenOrder}>
-              <div className={styles.orderDetail}>
-                <p>
-                  Mesa
-                  {' '}
-                  {document.table}
-                </p>
-                <p>{document.time}</p>
+          <div
+            key={document.id}
+            className={document.status === 'pending'
+            ? styles.kitchenOrder
+            : styles.kitchenOrderCooking}
+          >
+            <div className={styles.orderDetail}>
+              <p>
+                Mesa
+                {' '}
+                {document.table}
+              </p>
+              <p>{document.time}</p>
 
-                <p>
-                  Cliente:
-                  {' '}
-                  {document.name}
-                </p>
-              </div>
-              {document.order.map((order) => (
-                <div className={styles.orderProductCount} key={order.id}>
-                  <p>{order.name}</p>
-                  <p>{order.count}</p>
-                </div>
-            ))}
-              <div className={styles.totalSum}>
-                <p>
-                  Total:
-                  {' '}
-                  $
-                  {' '}
-                  {document.totalAmount}
-                </p>
-              </div>
-              <button type="submit" onClick={(e) => updateOrderStatus(e)}>yaapooo</button>
-              {/* <StatusBtns id={document.id} status={document.status} /> */}
-              <hr />
+              <p>
+                Cliente:
+                {' '}
+                {document.name}
+              </p>
             </div>
-          </form>
+            {document.order.map((order) => (
+              <div className={styles.orderProductCount} key={order.id}>
+                <p>{order.name}</p>
+                <p>{order.count}</p>
+              </div>
+            ))}
+            <div className={styles.totalSum}>
+              <p>
+                Total:
+                {' '}
+                $
+                {' '}
+                {document.totalAmount}
+              </p>
+            </div>
+            <button
+              className={styles.cookingStateBtn}
+              onClick={() => menuContext.editStatus(document.id, 'Cooking')}
+              type="button"
+            >
+              {document.status === 'Cooking' ? 'Listo para Entregar' : 'Preparar'}
+
+            </button>
+            <hr />
+          </div>
         ))}
       </div>
     </>

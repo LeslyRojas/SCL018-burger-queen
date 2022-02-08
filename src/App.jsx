@@ -8,6 +8,8 @@ import React, {
   createContext, useState, useMemo, useCallback,
 } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { updateDoc, doc } from 'firebase/firestore';
+import { db } from './firebase/FirebaseConfig';
 import Home from './Components/Home';
 // eslint-disable-next-line import/no-cycle
 import Menu from './Components/Menu';
@@ -25,7 +27,7 @@ function App() {
     itemList: menu,
     order: [],
   });
-  const [orderStatus, setOrderStatus] = useState({ status: 'pending' });
+  const [orderStatus, setOrderStatus] = useState(false);
 
   const addItems = useCallback((item) => setItems({
     ...items,
@@ -66,6 +68,19 @@ function App() {
     });
   }, [items]);
 
+  const editStatus = useCallback(async (id, status) => {
+    setOrderStatus(true);
+    try {
+      const ordersRef = doc(db, 'orders', id);
+      await updateDoc(ordersRef, {
+        // eslint-disable-next-line object-shorthand
+        status: status,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   const value = useMemo(() => ({
     orderStatus,
     setOrderStatus,
@@ -80,8 +95,9 @@ function App() {
     increaseItem,
     decreaseItem,
     cleanItemsFromOrder,
-  }), [addItems, cleanItemsFromOrder, increaseItem,
-    decreaseItem, items,
+    editStatus,
+  }), [orderStatus, addItems, cleanItemsFromOrder, increaseItem,
+    decreaseItem, items, editStatus,
     name, removeOrderItem, table]);
   return (
 
