@@ -197,7 +197,21 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgba(260, 255, 255, 1);
+  background-color: lightgreen;
+  border: 2px solid #fdd03b;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 300px;
+  height: auto;
+  line-height: 0px;
+  font-family: IBM Plex Sans Condensed;
+  padding: 1px;
+}
+.kitchenOrderCooking{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: tomato;
   border: 2px solid #fdd03b;
   margin-top: 20px;
   margin-bottom: 5px;
@@ -232,7 +246,7 @@ h1{
   height: 70px;
   font-family: IBM Plex Sans Condensed;
 }
-.pendingOrderBtn{
+.cookingStateBtn{
   background-color: #fdd03b;
   height: 30px;
 }
