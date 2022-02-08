@@ -1,19 +1,14 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable arrow-body-style */
-/* eslint-disable indent */
 /* eslint-disable import/no-cycle */
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import {
   collection, onSnapshot,
 } from 'firebase/firestore';
-import styles from './style.module.css';
-import { db } from '../firebase/FirebaseConfig';
 import { globalContext } from '../App';
-// import StatusBtns from './StatusBtns';
+import { db } from '../firebase/FirebaseConfig';
+import styles from './style.module.css';
 
-function Kitchen() {
+function DeliveredOrders() {
   const menuContext = useContext(globalContext);
-  // const editStatus = menuContext.editStatus();
 
   const [orderList, setOrderList] = useState([]);
 
@@ -22,18 +17,18 @@ function Kitchen() {
       collection(db, 'orders'),
       (snapshot) => {
         const arrayOrderList = snapshot.docs.map((document) => (
-        { ...document.data(), id: document.id }
+          { ...document.data(), id: document.id }
         ));
         setOrderList(arrayOrderList);
       },
     );
   }, []);
 
-  const pendingOrders = orderList.filter((document) => document.status === 'pending');
-  const cookingOrders = orderList.filter((document) => document.status === 'Cooking');
-  const filterTotalOrders = pendingOrders.concat(cookingOrders);
+  const readyOrders = orderList.filter((document) => document.status === 'Ready');
+  const deliveredOrders = orderList.filter((document) => document.status === 'Delivered');
+  const filterReadyOrders = readyOrders.concat(deliveredOrders);
 
-  const sortedOrders = filterTotalOrders.sort((a, b) => {
+  const sortedOrders = filterReadyOrders.sort((a, b) => {
     if (a.time < b.time) {
       return 1;
     } if (a.time > b.time) {
@@ -47,14 +42,14 @@ function Kitchen() {
       <header>
         <h1>BURGER QUEEN</h1>
       </header>
-
+      <h1>Pedidos por entregar</h1>
       <div className={styles.ordersContainer}>
         {sortedOrders.map((document) => (
           <div
             key={document.id}
-            className={document.status === 'pending'
-            ? styles.kitchenOrder
-            : styles.kitchenOrderCooking}
+            className={document.status === 'Delivered'
+              ? styles.kitchenOrder
+              : styles.kitchenOrderCooking}
           >
             <div className={styles.orderDetail}>
               <p>
@@ -86,20 +81,12 @@ function Kitchen() {
               </p>
             </div>
             <button
-              className={styles.cookingStateBtn}
-              onClick={() => menuContext.editStatus(document.id, 'Cooking')}
+              className={styles.deliveredStateBtn}
+              onClick={() => menuContext.editStatus(document.id, 'Delivered')}
               type="button"
             >
-              {document.status === 'Cooking' ? 'Listo para Entregar' : 'Preparar'}
+              {document.status === 'Delivered' ? 'Entregado' : 'Listo para entregar'}
             </button>
-            <button
-              className={styles.readyStateBtn}
-              onClick={() => menuContext.editStatus(document.id, 'Ready')}
-              type="button"
-            >
-              Enviar a garzón
-            </button>
-
             <hr />
           </div>
         ))}
@@ -108,4 +95,4 @@ function Kitchen() {
   );
 }
 
-export default Kitchen;
+export default DeliveredOrders;

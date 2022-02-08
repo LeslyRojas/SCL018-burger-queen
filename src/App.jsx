@@ -15,6 +15,7 @@ import Home from './Components/Home';
 import Menu from './Components/Menu';
 import Kitchen from './Components/Kitchen';
 import Administrator from './Components/Administrator';
+import DeliveredOrders from './Components/DeliveredOrders';
 import menu from './data/burgerqueen.json';
 
 export const globalContext = createContext();
@@ -22,7 +23,6 @@ export const globalContext = createContext();
 function App() {
   const [name, setName] = useState('');
   const [table, setTable] = useState('');
-
   const [items, setItems] = useState({
     itemList: menu,
     order: [],
@@ -108,6 +108,7 @@ function App() {
         <Route path="/Menu" element={<Menu />} />
         <Route path="/Kitchen" element={<Kitchen />} />
         <Route path="/Administrator" element={<Administrator />} />
+        <Route path="/Delivered" element={<DeliveredOrders />} />
       </Routes>
     </globalContext.Provider>
   );
