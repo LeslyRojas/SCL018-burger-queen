@@ -38,58 +38,86 @@ h1{
   font-size: 30px;
 }
 /*Menu Styles*/
+.clientContainer{
+  margin-left: 35px;
+  margin-top: -5%;
+}
+
+.containerMenu{
+  background-color: rgba(196, 196, 196, 0.13);
+  margin: 5%;
+  width: 90%;
+  height: 800px;
+}
+
 .nav{
-  background: #00202e;
+  background: black;
+  margin-top: 20px;
   color: white;
-  height: 40px;
-  width: 160px;
+  height: 50px;
+  width: 25%;
   border: none;
+  font-size: 16px;
 }
 .card{
-  margin: 5px;
+  background-color: white;
+  margin-left: 6%;
+  margin-top: 4%;
   padding: 1px;
-  width: 200px;
-  height: 220px;
+  width: 25%;
+  height: 180px;
+  font-size: 14px;
 }
 
 .image{
-  width: 184px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
 }
 
 .clientInfo{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 640px;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 80%px;
   height: 40px;
-  background-color: #00202e;
-  color: whitesmoke;
-  border: yellow;
+  background-color: black;
+  color: white;
 }
 .orderNav{
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 50px;
   border: black 2px;
-  width: 640px;
-  height: 35px;
-  background-color: #4a9396;
-  color: whitesmoke;
+  width: 97%;
+  height: 25px;
+  background-color: rgba(255, 185, 5, 1);;
+  color: black
 }
 .container{
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 640px;
-  background-color: #fdd03b;
+  width: 97%;
+  height: 50px;
+  background-color: white;
+  color: black;
+  line-height: 5px;
+  font-size: 16px;
 }
+
 .itemInfo{
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 70px;
+  width: 35%;
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: white;
+  font-size: 16px
 }
 .itemPrice{
   display: flex;
@@ -97,9 +125,10 @@ h1{
 .quantity{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 5px;
-
+  justify-content: space-around;
+  background-color: white;
+  width: 20%;
+  height: 30px;
 }
 .deleteBtn{
   width: 50px;
@@ -115,9 +144,9 @@ h1{
 .increaseBtn{
   width: 30px;
   height: 30px;
-  background-color: gray;
-  color: white;
-  border-radius: 10px;
+  background-color: rgba(255, 185, 5, 1);
+  color: black;
+  border-radius: 100%;
   border: none;
   margin-top: 15px;
   margin-left: 30px;
@@ -125,19 +154,35 @@ h1{
 .decreaseBtn{
   width: 30px;
   height: 30px;
-  background-color: gray;
-  color: white;
-  border-radius: 10px;
+  background-color: rgba(255, 185, 5, 1);
+  color: black;
+  border-radius: 100%;
   border: none;
   margin-top: 15px;
+  margin-left: 0%;
 }
 .totalProductsAndAmount{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
-  width: 640px;
+  justify-content: flex-end;
+  gap: 80px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  width: 97%;
+  padding: 10px;
 }
 
+.sendBtn{
+  margin-top: 10px;
+  margin-left: 150px;
+  background-color: rgba(255, 185, 5, 1);
+  color: black;
+  width: 50%;
+  height: 30px;
+  border: 2px solid black;
+}
 /*Kitchen Styles*/
 .ordersContainer{
   display: flex;
