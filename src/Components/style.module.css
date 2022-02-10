@@ -1,30 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rancho&display=swap');
+body{
+  background: url("../imagesBG/burger9.jpg");
+  background-position-y: 20%;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+/*Home Styles*/
+.header{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+h1{
+  grid-column: 2/6;
+  font-family: 'Rancho', cursive;
+  font-size: 70px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.67);
+  text-align: center;
+}
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    height: 500px;
+    width: 700px;
+    gap: 50px;
+  }
 .btnMenu{
-  background: rgb(44, 43, 43);
-  color: white;
-  border: none;
+  background: rgba(255, 185, 5, 1);
+  color: rgba(0, 0, 0, 1);
+  border: 3px solid #000000;;
   height: 100px;
-  width: 300px;
+  width: 420px;
   font-size: 30px;
-  margin-top: 100px;
-  margin-left: 200px;
+  margin-left: 150px;
   justify-items: center;
+  border-radius: 5px;
+  gap: 20px;
+  font-family: IBM Plex Sans Condensed;
+  font-size: 30px;
+}
+/*Menu Styles*/
+/*Routes buttons style*/
+.menuHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding-bottom: 30px;
+  gap: 0px;
+}
+h2{
+  font-family: 'Rancho', cursive;
+  font-size: 50px;
+  height: 50px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.67);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.menuHeaderBtns{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 
 }
+.routesBtns{
+  background: #FFB905;
+  width: 250px;
+  margin-top: 10px;
+  border: 2px solid #000000;
+  font-family: IBM Plex Sans Condensed;
+  font-size: 22px;
+}
+.linksBtns{
+  text-decoration: none;
+  color: black;
+}
+.clientContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  width: 200px;
+  height: 20px;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.containerMenu{
+  background-color: rgba(196, 196, 196, 0.13);
+  margin: 5%;
+  width: 90%;
+  height: 800px;
+}
+
 .nav{
   background: black;
+  margin-top: 20px;
   color: white;
-  height: 40px;
-  width: 160px;
+  height: 50px;
+  width: 25%;
   border: none;
+  font-size: 16px;
 }
 .card{
-  margin: 5px;
+  background-color: white;
+  margin-left: 6%;
+  margin-top: 4%;
   padding: 1px;
-  width: 200px;
-  height: 220px;
+  width: 25%;
+  height: 180px;
+  font-size: 14px;
 }
 
 .image{
-  width: 184px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
+}
+
+.clientInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+  width: 80%px;
+  height: 40px;
+  background-color: black;
+  color: white;
+}
+.orderNav{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  border: black 2px;
+  width: 97%;
+  height: 25px;
+  background-color: rgba(255, 185, 5, 1);;
+  color: black
+}
+.container{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 97%;
+  height: 50px;
+  background-color: white;
+  color: black;
+  line-height: 5px;
+  font-size: 16px;
+}
+
+.itemInfo{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: white;
+  font-size: 16px
+}
+.itemPrice{
+  display: flex;
+}
+.quantity{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  width: 20%;
+  height: 30px;
+}
+.deleteBtn{
+  width: 50px;
+  height: 30px;
+  background-color: gray;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 5px;
+}
+.increaseBtn{
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 185, 5, 1);
+  color: black;
+  border-radius: 100%;
+  border: none;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.decreaseBtn{
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 185, 5, 1);
+  color: black;
+  border-radius: 100%;
+  border: none;
+  margin-top: 15px;
+  margin-left: 0%;
+}
+.totalProductsAndAmount{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 80px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  width: 97%;
+  padding: 10px;
+}
+
+.sendBtn{
+  margin-top: 10px;
+  margin-left: 150px;
+  background-color: rgba(255, 185, 5, 1);
+  color: black;
+  width: 50%;
+  height: 30px;
+  border: 2px solid black;
+}
+/*Kitchen Styles*/
+.ordersContainer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: rgba(196, 196, 196, 0.13);
+  width: 700px;
+  gap: 30px;
+  background-attachment: scroll;
+}
+.kitchenOrder{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: tomato;
+  border: 2px solid #fdd03b;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 300px;
+  height: auto;
+  line-height: 0px;
+  font-family: IBM Plex Sans Condensed;
+  padding: 1px;
+}
+.kitchenOrderCooking{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: lightgreen;;
+  border: 2px solid #fdd03b;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  width: 300px;
+  height: auto;
+  line-height: 0px;
+  font-family: IBM Plex Sans Condensed;
+  padding: 1px;
+}
+.orderDetail{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  background: black;
+  color: whitesmoke;
+}
+.orderProductCount{
+  display: flex;
+  justify-content: space-between;
+}
+.totalSum{
+  display: flex;
+  justify-content: flex-end;
+}
+.deliveredStateBtn{
+  background-color: #173A0E;
+   color: whitesmoke;
+  height: 30px;
+}
+.statusBtns{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 5px;
+  height: 70px;
+  font-family: IBM Plex Sans Condensed;
+}
+.cookingStateBtn{
+  background-color: #fdd03b;
+  height: 30px;
+}
+.readyStateBtn{
+  background-color: #173A0E;
+   color: whitesmoke;
+  height: 30px;
 }
