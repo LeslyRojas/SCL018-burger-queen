@@ -11,10 +11,8 @@ import { Routes, Route } from 'react-router-dom';
 import { updateDoc, doc } from 'firebase/firestore';
 import { db } from './firebase/FirebaseConfig';
 import Home from './Components/Home';
-// eslint-disable-next-line import/no-cycle
 import Menu from './Components/Menu';
 import Kitchen from './Components/Kitchen';
-import Administrator from './Components/Administrator';
 import DeliveredOrders from './Components/DeliveredOrders';
 import menu from './data/burgerqueen.json';
 
@@ -107,7 +105,6 @@ function App() {
         <Route exact path="/Home" element={<Home />} />
         <Route path="/Menu" element={<Menu />} />
         <Route path="/Kitchen" element={<Kitchen />} />
-        <Route path="/Administrator" element={<Administrator />} />
         <Route path="/Delivered" element={<DeliveredOrders />} />
       </Routes>
     </globalContext.Provider>
