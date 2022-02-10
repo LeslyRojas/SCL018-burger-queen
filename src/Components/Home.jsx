@@ -5,7 +5,7 @@ import styles from './style.module.css';
 function Home() {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <h1>BURGER QUEEN</h1>
       </header>
       <div className={styles.homeContainer}>

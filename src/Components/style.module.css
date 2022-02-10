@@ -6,7 +6,12 @@ body{
   background-attachment: fixed;
 }
 /*Home Styles*/
+.header{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
 h1{
+  grid-column: 2/6;
   font-family: 'Rancho', cursive;
   font-size: 70px;
   color: rgba(255, 255, 255, 1);
