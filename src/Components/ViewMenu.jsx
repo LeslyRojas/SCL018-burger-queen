@@ -3,11 +3,11 @@
 /* eslint-disable import/no-cycle */
 import React, { useState, useContext } from 'react';
 import menu from '../data/burgerqueen.json';
+import Client from './Client';
 import styles from './style.module.css';
 // eslint-disable-next-line import/no-cycle
 import { globalContext } from '../App';
 import Order from './Order';
-import Client from './Client';
 
 function ViewMenu() {
   const menuContext = useContext(globalContext);
@@ -41,6 +41,7 @@ function ViewMenu() {
         ))}
         <Order />
       </div>
+
     </>
   );
 }
