@@ -52,8 +52,8 @@ function DeliveredOrders() {
           <div
             key={document.id}
             className={document.status === 'Delivered'
-              ? styles.kitchenOrder
-              : styles.kitchenOrderCooking}
+              ? styles.kitchenOrderCooking
+              : styles.kitchenOrder}
           >
             <div className={styles.orderDetail}>
               <p>

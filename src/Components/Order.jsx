@@ -95,13 +95,12 @@ function Order() {
 
           </section>
           <div className={styles.quantity}>
-            <button className={styles.increaseBtn} type="button" onClick={() => handleIncrease(item.id)}> + </button>
+            <button className={styles.decreaseBtn} type="button" onClick={() => handleDecrease(item.id)}> - </button>
             <p>
               {'   '}
               {item.count}
-              {'   '}
             </p>
-            <button className={styles.decreaseBtn} type="button" onClick={() => handleDecrease(item.id)}> - </button>
+            <button className={styles.increaseBtn} type="button" onClick={() => handleIncrease(item.id)}> + </button>
           </div>
           <button className={styles.deleteBtn} type="button" onClick={() => handleDelete(item.id)}>Delete</button>
           <p>
