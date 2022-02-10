@@ -3,6 +3,7 @@
 /* eslint-disable indent */
 /* eslint-disable import/no-cycle */
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   collection, onSnapshot,
 } from 'firebase/firestore';
@@ -46,6 +47,9 @@ function Kitchen() {
     <>
       <header>
         <h1>BURGER QUEEN</h1>
+        <button type="button" className={styles.routesBtns}>
+          <Link to="/Home" className={styles.linksBtns}>Home</Link>
+        </button>
       </header>
 
       <div className={styles.ordersContainer}>

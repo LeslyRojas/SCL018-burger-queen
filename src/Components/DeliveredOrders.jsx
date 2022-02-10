@@ -1,5 +1,6 @@
 /* eslint-disable import/no-cycle */
 import React, { useContext, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   collection, onSnapshot,
 } from 'firebase/firestore';
@@ -41,6 +42,9 @@ function DeliveredOrders() {
     <>
       <header>
         <h1>BURGER QUEEN</h1>
+        <button type="button" className={styles.routesBtns}>
+          <Link to="/Menu" className={styles.linksBtns}>Volver al Menú</Link>
+        </button>
       </header>
       <h1>Pedidos por entregar</h1>
       <div className={styles.ordersContainer}>

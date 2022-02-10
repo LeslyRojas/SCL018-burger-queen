@@ -8,7 +8,7 @@ body{
 /*Home Styles*/
 h1{
   font-family: 'Rancho', cursive;
-  font-size: 80px;
+  font-size: 70px;
   color: rgba(255, 255, 255, 1);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.67);
   text-align: center;
@@ -38,9 +38,59 @@ h1{
   font-size: 30px;
 }
 /*Menu Styles*/
+/*Routes buttons style*/
+.menuHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding-bottom: 30px;
+  gap: 0px;
+}
+h2{
+  font-family: 'Rancho', cursive;
+  font-size: 50px;
+  height: 50px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.67);
+  text-align: center;
+  margin-bottom: 10px;
+}
+.menuHeaderBtns{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+
+}
+.routesBtns{
+  background: #FFB905;
+  width: 250px;
+  margin-top: 10px;
+  border: 2px solid #000000;
+  font-family: IBM Plex Sans Condensed;
+  font-size: 22px;
+}
+.linksBtns{
+  text-decoration: none;
+  color: black;
+}
 .clientContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  width: 200px;
+  height: 20px;
   margin-left: 35px;
-  margin-top: -5%;
+  margin-top: 10px;
 }
 
 .containerMenu{
