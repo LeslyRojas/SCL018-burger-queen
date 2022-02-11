@@ -46,11 +46,13 @@ function Kitchen() {
   return (
     <>
       <header>
-        <h1>BURGER QUEEN</h1>
+        <h2>BURGER QUEEN</h2>
+      </header>
+      <nav className={styles.kitchenNav}>
         <button type="button" className={styles.routesBtns}>
           <Link to="/Home" className={styles.linksBtns}>Home</Link>
         </button>
-      </header>
+      </nav>
 
       <div className={styles.ordersContainer}>
         {sortedOrders.map((document) => (

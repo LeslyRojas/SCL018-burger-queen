@@ -13,15 +13,15 @@ function Menu() {
       <header>
         <div className={styles.menuHeader}>
           <div><h2>MENU</h2></div>
-          <div className={styles.menuHeaderBtns}>
-            <button type="button" className={styles.routesBtns}>
-              <Link to="/Home" className={styles.linksBtns}>Home</Link>
-            </button>
-            <button type="button" className={styles.routesBtns}><Link to="/Delivered" className={styles.linksBtns}>Pedidos por Entregar</Link></button>
-
-          </div>
         </div>
       </header>
+      <nav className={styles.menuNavBtns}>
+        <button type="button" className={styles.routesBtns}>
+          <Link to="/Home" className={styles.linksBtns}>Home</Link>
+        </button>
+        <button type="button" className={styles.routesBtns}><Link to="/Delivered" className={styles.linksBtns}>Pedidos por Entregar</Link></button>
+
+      </nav>
 
       <hr />
       <ViewMenu />

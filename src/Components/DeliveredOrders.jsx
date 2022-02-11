@@ -40,13 +40,15 @@ function DeliveredOrders() {
 
   return (
     <>
-      <header>
+      <header className={styles.deliveredOrdersHeader}>
         <h1>BURGER QUEEN</h1>
+      </header>
+      <nav className={styles.deliveredOrdersNav}>
         <button type="button" className={styles.routesBtns}>
           <Link to="/Menu" className={styles.linksBtns}>Volver al Menú</Link>
         </button>
-      </header>
-      <h1>Pedidos por entregar</h1>
+      </nav>
+      <h2>Pedidos por entregar</h2>
       <div className={styles.ordersContainer}>
         {sortedOrders.map((document) => (
           <div
