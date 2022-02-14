@@ -49,7 +49,8 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 50px;
+  width: 630px;
   padding-bottom: 30px;
   gap: 0px;
 }
@@ -62,22 +63,22 @@ h2{
   text-align: center;
   margin-bottom: 10px;
 }
-.menuHeaderBtns{
+.menuNavBtns{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 250px;
-  height: 150px;
-  margin-top: 5px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 700px;
+  height: 70px;
+  margin-top: 0px;
   margin-bottom: 5px;
-  padding-bottom: 5px;
-
+  padding-bottom: 7px;
 }
 .routesBtns{
   background: #FFB905;
-  width: 250px;
-  margin-top: 10px;
+  width: 210px;
+  height: 40px;
+  margin-top: 3px;
   border: 2px solid #000000;
   font-family: IBM Plex Sans Condensed;
   font-size: 22px;
@@ -92,10 +93,18 @@ h2{
   justify-content: flex-start;
   align-items: flex-start;
   gap: 15px;
-  width: 200px;
-  height: 20px;
+  width: 400px;
+  height: 30px;
   margin-left: 35px;
-  margin-top: 10px;
+  margin-top: 5px;
+}
+.clientInput{
+  height: 30px;
+  border-color: yellow;
+}
+::placeholder{
+  font-family: IBM Plex Sans Condensed;
+  font-size: 17px;
 }
 
 .containerMenu{
@@ -103,6 +112,8 @@ h2{
   margin: 5%;
   width: 90%;
   height: 800px;
+  margin-top: 35px;
+  background-attachment: scroll;
 }
 
 .nav{
@@ -239,6 +250,12 @@ h2{
   border: 2px solid black;
 }
 /*Kitchen Styles*/
+.kitchenNav{
+  display: flex;
+  justify-content: flex-end;
+  width: 690px;
+  margin-top: 10px;
+}
 .ordersContainer{
   display: flex;
   flex-flow: row wrap;
@@ -247,6 +264,7 @@ h2{
   width: 700px;
   gap: 30px;
   background-attachment: scroll;
+  margin-top: 20px;
 }
 .kitchenOrder{
   display: flex;
@@ -314,4 +332,13 @@ h2{
   background-color: #173A0E;
    color: whitesmoke;
   height: 30px;
+}
+/*Delivered Orders styles*/
+.deliveredOrdersHeader{
+  height: 100px;
+}
+.deliveredOrdersNav{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
 }
